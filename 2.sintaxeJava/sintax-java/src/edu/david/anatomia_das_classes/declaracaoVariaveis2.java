@@ -1,4 +1,4 @@
-package anatomia_das_classes;
+package edu.david.anatomia_das_classes;
 
 public class declaracaoVariaveis2 {
     public static void main(String[] args) {
