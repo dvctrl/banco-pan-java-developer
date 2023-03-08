@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
 public class ExercicioDiaSemana {
+
     public static void main(String[] args) {
+
+        switchSemana ();
+        swithFerias();
+
+    }
+
+    private static void switchSemana() {
         int domingo = 1;
         int segunda = 2;
         int terca = 3;
@@ -12,7 +20,6 @@ public class ExercicioDiaSemana {
 
         String dia;
 
-
         System.out.print("Informe em qual dia da semana estamos meu chapinha =>  ");
         Scanner qualDia = new Scanner(System.in);
         dia = qualDia.next();
@@ -20,13 +27,13 @@ public class ExercicioDiaSemana {
         switch (dia){
             case("domingo"):
                 System.out.println("Domingo é o dia da semana " + domingo);
-            break;
+                break;
             case("segunda"):
                 System.out.println("Segunda é o dia da semana " + segunda);
-            break;
+                break;
             case("terça"):
                 System.out.println("Terça é o dia da semana " + terca);
-            break;
+                break;
             case("quarta"):
                 System.out.println("quarta é o dia da semana " + quarta);
                 break;
@@ -44,26 +51,36 @@ public class ExercicioDiaSemana {
                         "se esforça mais ai, chapinha!");
         }
 
+    }
+    private static void swithFerias() {
         int num;
         System.out.println("Agora vamos para outro exemplo \n" +
-                      "informe um número inteiro de 1 à 5 =>  ");
+                "informe um número inteiro de 1 à 5 =>  ");
         Scanner qualNum= new Scanner(System.in);
-        num = qualDia.nextInt();
+        num = qualNum.nextInt();
 
         switch (num){
             case(1):
                 System.out.println("correto!");
+                break;
             case(2):
                 System.out.println("correto!");
+                break;
             case(3):
                 System.out.println("correto!");
+                break;
             case(4):
                 System.out.println("errado!");
+                break;
             case(5):
                 System.out.println("talvez!");
+                break;
             default:
-                System.out.println(num + " é um valor invalido!");
+                System.out.println("Valor informado invalido.");
+
         }
 
     }
+
 }
+
