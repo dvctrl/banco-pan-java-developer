@@ -1,3 +1,5 @@
+package projetoReferencia;
+
 public class MeuObj {
 
     Integer num;
