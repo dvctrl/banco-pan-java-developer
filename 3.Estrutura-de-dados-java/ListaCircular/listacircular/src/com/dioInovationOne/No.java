@@ -13,8 +13,16 @@ public class No <T>{
         this.conteudo = conteudo;
     }
 
+    public T getConteudo() {
+        return conteudo;
+    }
+
     public void setProximoNo(No<T> proximoNo) {
         this.proximoNo = proximoNo;
+    }
+
+    public No<T> getProximoNo() {
+        return proximoNo;
     }
 
     @Override
