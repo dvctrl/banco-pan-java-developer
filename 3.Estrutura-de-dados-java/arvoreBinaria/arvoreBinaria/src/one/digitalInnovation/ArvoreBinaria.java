@@ -1,6 +1,6 @@
 package one.digitalInnovation;
 
-public class ArvoreBinaria<T extends Comparable <T> {
+public class ArvoreBinaria<T extends Comparable <T>> {
 
     private BinNo<T> raiz;
     public ArvoreBinaria(){
@@ -20,4 +20,27 @@ public class ArvoreBinaria<T extends Comparable <T> {
         }
         return atual;
     }
+    public void exibirEmOrdem(){
+        System.out.println("\nexibindo em InOrdem");
+        exibirEmOrdem(this.raiz);
+    }
+    private void exibirEmOrdem(BinNo<T> atual){
+        if(atual != null){
+            exibirEmOrdem(atual.getNoEsq());
+            System.out.println(atual.getConteudo() + ",");
+            exibirEmOrdem(atual.getNoDir());
+        }
+    }
+    public void exibirPosOrdem(){
+        System.out.println("\nexibindo em PósOrdem");
+        exibirPosOrdem(this.raiz);
+    }
+    private void exibirPosOrdem(BinNo<T> atual){
+        if(atual != null){
+            exibirPosOrdem(atual.getNoEsq());
+            exibirPosOrdem(atual.getNoDir());
+            System.out.println(atual.getConteudo() + ",");
+        }
+    }
+
 }
